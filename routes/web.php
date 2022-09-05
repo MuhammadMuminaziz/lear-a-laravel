@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileInformationController;
@@ -28,3 +29,5 @@ Route::get('users/{user:username}', [UserController::class, 'show'])->name('user
 
 Route::get('register', [RegisterController::class, 'create'])->name('register');
 Route::post('register', [RegisterController::class, 'store'])->name('register');
+Route::get('login', [AuthenticationController::class, 'create'])->name('login');
+Route::post('login', [AuthenticationController::class, 'store'])->name('login');

@@ -6,8 +6,8 @@
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
                 </div>
+                @endif
                 <div class="card">
-                    @endif
                     <div class="card-header">Welcome to my site</div>
                     <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit atque nulla, ut nemo eius harum provident nesciunt assumenda, at, unde ipsa in aliquam quisquam nobis exercitationem eos ullam illum neque.</p>
