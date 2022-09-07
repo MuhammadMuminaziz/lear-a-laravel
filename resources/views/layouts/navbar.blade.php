@@ -13,12 +13,21 @@
         @endforeach
       </ul>
       <ul class="navbar-nav mb-2 mb-lg-0">
+        @guest
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{ route('register') }}">Register</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{ route('login') }}">Login</a>
         </li>
+        @else
+        <li class="nav-item">
+          <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <button type="submit" class="btn btn-danger nav-link text-white btn-xs">Logout</button>
+          </form>
+        </li>
+        @endguest
       </ul>
     </div>
   </div>
